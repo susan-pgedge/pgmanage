@@ -1,0 +1,53 @@
+.accordion {
+    .card {
+        border-radius: 0;
+        border: 0;
+
+        &-header {
+            background-color: rgba($lightModeBorderColor, .5);
+            border-bottom: 0;
+            border-top: $borderWidth solid $lightModeBorderColor;
+            padding: 16px 20px;
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+            white-space: nowrap;
+
+
+            .fa-chevron-down {
+                transform: rotate(0deg);
+                transition: inherit;
+                opacity: .5;
+            }
+
+            &:not(.collapsed){
+                background-color: rgba($primaryBlue, 0.2);
+                transition: all .3s ease-in-out;
+               
+                .fa-chevron-down {
+                    transform: rotate(180deg);
+                    transition: inherit;
+                    opacity: 1;
+                }
+            }
+        }
+
+        &-body {
+            .list-group {
+
+                &-item {
+                    border: 0;
+                    padding: 8px 20px 8px 32px;
+                    background-color: rgba($primaryBlue, 0.08);
+
+                    &:first-child {
+                        border-radius: 0;
+                    }
+
+                    &:not(:last-of-type) {
+                        border-bottom: 1px solid rgba($primaryBlue, 0.1);
+                    }
+                }
+            }
+        }
+    }
+}

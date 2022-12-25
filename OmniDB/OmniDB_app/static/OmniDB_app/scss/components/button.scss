@@ -1,0 +1,27 @@
+.button {
+    color: $primaryLight;
+    font-size: $fontSize;
+    border-color: transparent;
+
+    &:disabled {
+        opacity: .4;    
+    }
+
+    &:hover {
+        border-color: transparent; 
+        opacity: .8;
+        color: $primaryLight;
+    }
+
+    &-primary {
+        background-color: $primaryBlue;
+    }
+
+    &-success {
+        background-color: $sucessColor;
+    }
+
+    &-danger {
+        background-color: $dangerColor;
+    }
+}

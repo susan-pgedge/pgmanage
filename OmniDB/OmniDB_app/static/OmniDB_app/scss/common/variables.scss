@@ -1,0 +1,36 @@
+//common
+$primaryBlue: #206BC4;
+$primaryLight: #F8FAFC;
+$primaryColor: #1D273B;
+$primaryMutedColor: #616876;
+$borderRadius: 8px;
+$borderWidth: 1px;
+
+//typography
+$fontFamily: 'Poppins', sans-serif;
+$fontSize: 0.875rem;
+$fontWeight: 400;
+$fontWeightMedium: 500;
+$fontWeightBold: 700;
+$lineHeight: 1.4;
+
+//light mode
+$lightModeBg: #F1F5F9;
+$lightModeFontColor: $primaryColor;
+$lightModeBgSurface: #FFFFFF;
+$lightModeBgSurfaceSecondary: $primaryLight;
+$lightModeBorderColor: #E6E7E9;
+$lightModeDisabledFontColor: #C8D3E1;
+
+//dark mode
+$darkModeBg: #1A2234;
+$darkModeFontColor: $primaryLight;
+$darkModeBgSurface: #1D273B;
+$darkModeBorderColor: #243049;
+$darkModeBorderColorActive: #314264;
+$darkModeDisabledFontColor: #313C52;
+
+//accent colors
+$dangerColor: #D72239;
+$sucessColor: #2FB344;
+
