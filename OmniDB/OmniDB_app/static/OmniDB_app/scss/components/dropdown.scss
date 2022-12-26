@@ -8,13 +8,15 @@ $dropdownMinWidth: 11rem;
 .dropdown {
     &-menu {
         font-size: $fontSize;
-        color: $primaryColor;
-        background-color: $lightModeBgSurface;
         border-radius: $borderRadius;
-        border-width: $borderWidth;
+        border-width: 1px;
         box-shadow: 0 0.5rem 1rem rgba(0,  0,  0,  0.15);
         min-width: $dropdownMinWidth;
         overflow-y: auto;
+
+        @include themify() {
+            background-color: themed($surfaceBg);
+        }
     
         &-sm {
             max-height: $dropdownMaxHeightSm;
@@ -27,6 +29,14 @@ $dropdownMinWidth: 11rem;
 
     &-item {
         padding: .5rem .75rem;
-        color: $lightModeFontColor;
+        color: $fontColorLight;
+
+        @include themify() {
+            color: themed($color);
+        }
+
+        &:hover {
+            background-color: rgba($primaryMutedColor, 0.04);
+        }
     }
 }

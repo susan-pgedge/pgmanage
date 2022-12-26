@@ -2,16 +2,19 @@
     .card {
         border-radius: 0;
         border: 0;
+        background-color: inherit;
 
         &-header {
-            background-color: rgba($lightModeBorderColor, .5);
             border-bottom: 0;
-            border-top: $borderWidth solid $lightModeBorderColor;
             padding: 16px 20px;
             cursor: pointer;
             transition: all .3s ease-in-out;
             white-space: nowrap;
 
+            @include themify() {
+                border-top: themed($accordionHeadingBorder);
+                background-color: themed($accordionHeadingBg);
+            }
 
             .fa-chevron-down {
                 transform: rotate(0deg);
@@ -20,8 +23,11 @@
             }
 
             &:not(.collapsed){
-                background-color: rgba($primaryBlue, 0.2);
                 transition: all .3s ease-in-out;
+
+                @include themify() {
+                    background-color: themed($accordionHeadingActiveBg);
+                }
                
                 .fa-chevron-down {
                     transform: rotate(180deg);
@@ -44,7 +50,7 @@
                     }
 
                     &:not(:last-of-type) {
-                        border-bottom: 1px solid rgba($primaryBlue, 0.1);
+                        border-top: 1px solid rgba($primaryBlue, 0.1);
                     }
                 }
             }

@@ -1,15 +1,24 @@
+@import '../common//themes';
+
+$theme-map: null; //important! do not delete this
+
 @import '../common/variables';
 @import '../common/typography';
 @import '../components//button';
 @import '../components/dropdown';
 @import '../components/accordion';
+@import '../components/input';
+
 
 $modalPadding: 24px;
 
 .modal {
     font-family: $fontFamily;
     font-size: $fontSize;
-    color: #1D273B;
+
+    @include themify() {
+        color: themed($color);
+    }
 
     &-blur {
         backdrop-filter: blur(4px);
@@ -17,11 +26,19 @@ $modalPadding: 24px;
 
     &-content {
         border-radius: $borderRadius;
+
+        @include themify() {
+            background: themed($surfaceBg);
+        }
     }
 
     &-header {
         min-height: 3.5rem;
         padding: 0 1.5rem;
+
+        @include themify() {
+            border-bottom: themed($border);
+        }
 
         .close {
             color: inherit;
@@ -36,47 +53,142 @@ $modalPadding: 24px;
     &-body {
         padding: $modalPadding;
     }
+
+    &-footer {
+        position: relative;
+        z-index: 2;
+
+        @include themify() {
+            background-color: themed($surfaceBg);
+        }
+    }
 }
 
 .modal-connections {
     &__content {
-        height: 400px;
+        height: 500px;
     }
 
     &__body {
         overflow-y: hidden;
-        height: 400px;
+        height: 500px;
     }
 
     &__panel {
+        @include themify() {
+            border-right: themed($border);
+        }
+
         .add-connection {
             border: 0;
             padding: 16px 20px;
         }
     }
 
-    &__list, &__form {
+    &__list, &__forms {
         overflow-y: auto;
     }
 
     &__list {
         height: calc(100% - 67px);
 
+        @include themify() {
+            border-right: themed($border);
+        }
+
         .connection {
-            padding: 8px 20px 8px 32px;
+            padding: 8px 20px;
             border-radius: 0;
             border: 0;
-            border-top: $borderWidth solid $lightModeBorderColor;
+            cursor: pointer;
+
+            @include themify() {
+                border-top: themed($border);
+                background-color: themed($surfaceBg);
+            }
         }
     }
 
-    &__form  {
-        height: calc(100% - 54px);
+    &__forms  {
+        height: calc(100% - 67px);
+        padding: 20px;
 
-        .group {
-            &__item {
-                border-radius: 16px;
-                background: #F1F1F1;
+        .group-edit-form,  .connection-form {
+            width: calc(100% - 40px);
+        }
+
+        .group-edit-form {
+            display: none;
+
+            &__list {
+                margin: -8px -8px;
+                .group-list {
+                    &__item {
+                        position: relative;
+                        margin: 8px;
+                        flex: 0 1 calc(33.3% - 16px);
+                        cursor: pointer;
+
+                        &_wrap {
+                            transition: all .2s ease-in-out;
+                            padding: 8px 16px 8px 27px;
+                            border-radius: $borderRadius;
+
+                            @include themify() {
+                                border: themed($border);
+                            }
+                        }
+
+                        input[type='checkbox'] {
+                            position: absolute;
+                            left: 16px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+
+                        input[type='checkbox']:checked ~ .group-list__item_wrap {
+                            background-color: rgba($primaryBlue, .15);
+                            border: 1px solid $primaryBlue;
+                          }
+
+                        &_title {
+                            font-weight: 500;
+                        }
+                    }
+                }
+                
+            }
+
+        }
+
+        .connection-form {
+            &__header {
+                @include themify() {
+                    border-bottom: themed($border);
+                }
+
+                &_title {
+                    font-weight: 500;
+                }
+            }
+
+            &__divider {
+                position: relative;
+
+                &:before, &:after {
+                    content: "";
+                    display: block;
+                    width: calc((100% - 50px) / 2);
+                    background-color: $primaryMutedColor;
+                    height: 1px;
+                }
+
+                &_text {
+                    display: block;
+                    margin: 0 auto;
+                    font-weight: 500;
+                    color: $primaryMutedColor;
+                }
             }
         }
     }
