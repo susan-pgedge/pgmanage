@@ -1106,13 +1106,15 @@
     <div class="modal fade" id="modal_password_check" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="modal-header justify-content-center">
-            <h5 class="modal-title">Master Password</h5>
+          <div class="modal-header align-items-center">
+            <h2 class="modal-title font-weight-bold">Master Password</h2>
           </div>
           <div class="modal-body">
-            <div id="master_password_content" style='white-space: pre-line;'>
+            <div id="master_password_content" class="mb-3">
             </div>
-            <input id="master_password_check" class="form-control" type="password" placeholder="Password" style="margin-top: 20px; margin-bottom:20px; text-align: center;" minlength="8" required/>
+            <div class="form-group">
+              <input id="master_password_check" class="form-control" type="password" placeholder="Password" minlength="8" required/>
+            </div>
           </div>
           <div class="modal-footer">
             <button id="password_check_button" type="button" class="btn btn-success" data-dismiss="modal">Ok</button>
