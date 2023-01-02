@@ -1027,19 +1027,19 @@
     </div>
 
     <!-- Modal Generic Message -->
-    <div class="modal fade" id="modal_message" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal show" style="display:block;" id="modal_message" tabindex="-1" role="dialog" aria-hidden="true">
       <div id="modal_message_dialog" class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="modal-header">
+          <div class="modal-header align-items-center">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
+              <span aria-hidden="true"><i class="fa-solid fa-xmark"></i></span>
             </button>
           </div>
           <div id="modal_message_content" class="modal-body" style='white-space: pre-line;'>
           </div>
           <div class="modal-footer">
             <button id="modal_message_yes" type="button" class="btn btn-primary" data-dismiss="modal">Yes</button>
-            <button id="modal_message_ok" type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+            <button id="modal_message_ok" type="button" class="btn btn-success" data-dismiss="modal">Ok</button>
             <button id="modal_message_no" type="button" class="btn btn-danger" data-dismiss="modal">No</button>
             <button id="modal_message_cancel" type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
           </div>
