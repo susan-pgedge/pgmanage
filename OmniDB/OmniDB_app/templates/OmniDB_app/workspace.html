@@ -989,16 +989,18 @@
     <div class="modal fade" id="modal_plugins" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog modal-xl" role="document">
         <div class="modal-content">
-          <div class="modal-header">
-            <div class="custom-file">
-              <input type="file" class="custom-file-input" id="plugin_file_selector" onchange="upload(this)" required>
-              <label class="custom-file-label" for="plugin_file_selector">Select plugin package to be installed...</label>
-            </div>
+          <div class="modal-header align-items-center">
+            <h2 class="modal-title font-weight-bold">Manage plugins</h2>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
+              <span aria-hidden="true"><i class="fa-solid fa-xmark"></i></span>
             </button>
           </div>
           <div class="modal-body">
+            <div class="custom-file mb-3">
+              <input type="file" class="custom-file-input" id="plugin_file_selector" onchange="upload(this)" required>
+              <label class="custom-file-label" for="plugin_file_selector">Select plugin package to be installed...</label>
+            </div>
+
             <div id="plugin_grid" style="width: 100%; height: 300px; overflow: hidden;"></div>
           </div>
         </div>
