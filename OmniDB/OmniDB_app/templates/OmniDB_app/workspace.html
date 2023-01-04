@@ -650,28 +650,54 @@
     <div class="modal fade" id="modal_about" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">{{ omnidb_version }}</h5>
+          <div class="modal-header align-items-center">
+            <h2 class="modal-title font-weight-bold">About</h2>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
+              <span aria-hidden="true"><i class="fa-solid fa-xmark"></i></span>
             </button>
           </div>
-          <div class="modal-body text-center">
-            <div class="my-3">
-              <img src="{{url_folder}}/static/OmniDB_app/images/postgresql_medium.png" title="PostgreSQL"/>
-              <img src="{{url_folder}}/static/OmniDB_app/images/oracle_medium.png" title="Oracle"/>
-              <img src="{{url_folder}}/static/OmniDB_app/images/mysql_medium.png" title="MySQL"/>
-              <img src="{{url_folder}}/static/OmniDB_app/images/mariadb_medium.png" title="MariaDB"/>
-              <img src="{{url_folder}}/static/OmniDB_app/images/sqlite_medium.png" title="SQLite"/>
-              <!--<img src="{{url_folder}}/static/OmniDB_app/images/sqlserver_medium.png" title="SQL Server"/>
-              <img src="{{url_folder}}/static/OmniDB_app/images/firebird_medium.png" title="Firebird"/>
-              <img src="{{url_folder}}/static/OmniDB_app/images/access_medium.png" title="Microsoft Access"/>-->
+       
+          <div class="modal-body">
+            <div class="row mb-3">
+              <div class="col-5">
+                <p class="font-weight-semibold">Version:</p>
+              </div>
+              <div class="col-7">{{ omnidb_version }}</div>
             </div>
-            <div class="my-3"><a class="font-weight-bold" target="_blank" href="https://github.com/commandprompt/pgmanage">PgManage website</a></div>
-            <div class="my-3">
-              <h2>Primary Supporter:</h2>
-              <a target="_blank" class="font-weight-bold" href="https://www.commandprompt.com/">Command Prompt Inc</a>
-              <a class="d-block" target="_blank" href="https://www.commandprompt.com/"><img src="{{url_folder}}/static/OmniDB_app/images/supporters/command_prompt_inc.png" title="CommandPrompt Inc."/></a>
+
+            <div class="row mb-3">
+              <div class="col-5 d-flex align-items-center">
+                <p class="font-weight-semibold mb-0">Supported databases:</p>
+              </div>
+
+              <div class="col-7 modal-about__db d-flex justify-content-between align-items-center">
+                <img src="{{url_folder}}/static/OmniDB_app/images/postgresql_large.png" title="PostgreSQL"/>
+                <img src="{{url_folder}}/static/OmniDB_app/images/oracle_large.png" title="Oracle"/>
+                <img src="{{url_folder}}/static/OmniDB_app/images/mysql_large.png" title="MySQL"/>
+                <img src="{{url_folder}}/static/OmniDB_app/images/sqlite_large.png" title="SQLite"/>
+                <img src="{{url_folder}}/static/OmniDB_app/images/mariadb_large.png" title="MariaDB"/>
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-5">
+                <p class="font-weight-semibold">Primary Supporter:</p>
+              </div>
+              <div class="col-7">
+                <a target="_blank" class="font-weight-bold" href="https://www.commandprompt.com/">
+                  Command Prompt Inc
+                  <!-- <img src="{{url_folder}}/static/OmniDB_app/images/supporters/command_prompt_inc.png" title="CommandPrompt Inc."/> -->
+                </a>
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-5">
+                <p class="font-weight-semibold">Website:</p>
+              </div>
+              <div class="col-7">
+                <a class="font-weight-bold" target="_blank" href="https://github.com/commandprompt/pgmanage">PgManage</a>
+            </div>
             </div>
           </div>
         </div>
