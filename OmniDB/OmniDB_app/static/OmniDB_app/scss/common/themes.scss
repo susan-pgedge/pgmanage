@@ -1,6 +1,7 @@
 @import './variables.scss';
 
 //shortcuts
+$borderColor: 'borderColor';
 $border: 'border';
 $color: 'color';
 $surfaceBg: 'surfaceBg';
@@ -12,9 +13,11 @@ $customFileButtonBg: 'customFileButtonBg';
 $accordionHeadingBg: 'accordionHeadingBg';
 $accordionHeadingBorder: 'accordionHeadingBorder';
 $accordionHeadingActiveBg: 'accordionHeadingActiveBg';
+$tabsSurfaceBg: 'tabsSurfaceBg';
 
 $themes: (
     light: (
+        borderColor: $borderColorLight,
         border: $borderLight,
         color: $fontColorLight,
         surfaceBg: $bgSurfaceLight,
@@ -26,8 +29,10 @@ $themes: (
         accordionHeadingActiveBg: $accordionHeadingActiveBgLight,
         accordionHeadingBorder: $accordionHeadingBorderLight,
         disabledInputBg: $bgLight,
+        tabsSurfaceBg: $bgSurfaceBlueLight,
     ),
     dark: (
+        borderColor: $borderColorDark,
         border: $borderDark,
         color: $fontColorDark,
         surfaceBg: $bgSurfaceDark,
@@ -39,6 +44,7 @@ $themes: (
         accordionHeadingActiveBg: $accordionHeadingActiveBgDark,
         accordionHeadingBorder: $accordionHeadingBorderDark,
         disabledInputBg: $disabledInputBgDark,
+        tabsSurfaceBg: $bgSurfaceSecondaryDark,
     ),
 );
 
