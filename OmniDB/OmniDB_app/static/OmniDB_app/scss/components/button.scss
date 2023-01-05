@@ -4,6 +4,8 @@
     border: 0 !important;//workaround! to be removed when new stylesheets are implemented
     font-weight: 500;
     border-radius: $borderRadius;
+    box-sizing: border-box;
+    max-height: 35px;
 
     &:disabled {
         opacity: .4; 
@@ -17,10 +19,22 @@
     }
 
     &-primary {
-        background-color: $primaryBlue;
+        background-color: $primaryBlue!important; //workaround! to be removed when new stylesheets are implemented
 
         &:hover {
-            background-color: $primaryBlue;
+            background-color: $primaryBlue !important; //workaround! to be removed when new stylesheets are implemented;
+        }
+    }
+
+    &-outline {
+        background-color: transparent;
+        border: 2px solid $primaryBlue !important; //workaround! to be removed when new stylesheets are implemented;;
+        color: $primaryBlue !important; //workaround! to be removed when new stylesheets are implemented;;
+
+        &:hover {
+            opacity: 1;
+            color: $bgSurfaceLight !important; //workaround! to be removed when new stylesheets are implemented;;
+            background-color: $primaryBlue !important; //workaround! to be removed when new stylesheets are implemented;
         }
     }
 
